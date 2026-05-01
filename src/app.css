@@ -557,6 +557,213 @@ h3 {
   line-height: 1.5;
 }
 
+.exercises-panel {
+  margin-bottom: 20px;
+}
+
+.file-pill {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  border: 1px solid rgb(17 24 39 / 0.1);
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #536176;
+  background: rgb(255 255 255 / 0.74);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.exercise-card {
+  display: flex;
+  min-height: 360px;
+  flex-direction: column;
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid rgb(17 24 39 / 0.08);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 12px 34px rgb(15 23 42 / 0.06);
+}
+
+.exercise-card > div:first-child p:last-child {
+  margin-bottom: 0;
+  color: #697789;
+  line-height: 1.55;
+}
+
+.exercise-label {
+  margin-bottom: 10px;
+  color: #25766b;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.counter-workbench {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  border-radius: 8px;
+  padding: 26px;
+  background: #f5f7fb;
+}
+
+.counter-workbench strong {
+  color: #101828;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.control-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.control-row .button,
+.form-grid .button {
+  border: 0;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  transform: none;
+}
+
+.todo-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-list li {
+  border: 1px solid rgb(17 24 39 / 0.08);
+  border-radius: 8px;
+  background: #f5f7fb;
+}
+
+.todo-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 14px;
+  color: #172033;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.todo-list input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #42b883;
+}
+
+.todo-list .done span {
+  color: #697789;
+  text-decoration: line-through;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 7px;
+  color: #536176;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.form-grid input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid rgb(17 24 39 / 0.12);
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #172033;
+  background: #ffffff;
+  font: inherit;
+}
+
+.form-grid input:focus {
+  border-color: #42b883;
+  outline: 3px solid rgb(66 184 131 / 0.16);
+}
+
+.preview-box {
+  display: grid;
+  gap: 6px;
+  margin-top: auto;
+  border-radius: 8px;
+  padding: 16px;
+  color: #536176;
+  background: #f5f7fb;
+}
+
+.preview-box strong {
+  color: #172033;
+  font-size: 1.14rem;
+}
+
+.theme-practice {
+  color: #172033;
+  background: #ffffff;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.theme-practice.dark {
+  border-color: rgb(66 184 131 / 0.35);
+  color: #f8fafc;
+  background: #1e293b;
+}
+
+.theme-practice.dark h3,
+.theme-practice.dark .exercise-card,
+.theme-practice.dark .exercise-label {
+  color: inherit;
+}
+
+.theme-practice.dark p {
+  color: #cbd5e1;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  border-radius: 8px;
+  padding: 16px;
+  background: rgb(66 184 131 / 0.12);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.toggle-row input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: #42b883;
+}
+
 @media (max-width: 900px) {
   .shell {
     width: min(100% - 24px, 720px);
@@ -593,6 +800,10 @@ h3 {
   }
 
   .task-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exercise-grid {
     grid-template-columns: 1fr;
   }
 }

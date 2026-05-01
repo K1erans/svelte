@@ -2,6 +2,10 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from './assets/vite.svg'
   import heroImg from './assets/hero.png'
+  import CounterPractice from './lib/exercises/CounterPractice.svelte'
+  import ProfileFormPractice from './lib/exercises/ProfileFormPractice.svelte'
+  import ThemePractice from './lib/exercises/ThemePractice.svelte'
+  import TodoPractice from './lib/exercises/TodoPractice.svelte'
 
   type Task = {
     id: string
@@ -203,6 +207,24 @@
           </div>
         </article>
       {/each}
+    </div>
+  </section>
+
+  <section class="panel exercises-panel" aria-labelledby="exercises-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Starter files</p>
+        <h2 id="exercises-title">Practice area</h2>
+      </div>
+
+      <span class="file-pill">LEARNING_TASKS.md</span>
+    </div>
+
+    <div class="exercise-grid">
+      <CounterPractice />
+      <TodoPractice />
+      <ProfileFormPractice />
+      <ThemePractice />
     </div>
   </section>
 </main>
