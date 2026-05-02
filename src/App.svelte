@@ -1,7 +1,5 @@
 <script lang="ts">
   import svelteLogo from './assets/svelte.svg'
-  import viteLogo from './assets/vite.svg'
-  import heroImg from './assets/hero.png'
   import CounterPractice from './lib/exercises/CounterPractice.svelte'
   import ProfileFormPractice from './lib/exercises/ProfileFormPractice.svelte'
   import ThemePractice from './lib/exercises/ThemePractice.svelte'
@@ -141,27 +139,6 @@
           <dd>Core</dd>
         </div>
       </dl>
-    </div>
-
-    <div class="hero-visual learning-card" aria-label="Current study status">
-      <div class="visual-header">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="visual-stage study-stage">
-        <img class="base" src={heroImg} alt="" />
-        <img class="logo svelte" src={svelteLogo} alt="Svelte" />
-        <img class="logo vite" src={viteLogo} alt="Vite" />
-        <div class="code-note">
-          <span>today.svelte</span>
-          <strong>{completedCount === totalTasks ? 'Capstone ready' : learningTasks[completedCount]?.title}</strong>
-        </div>
-      </div>
-      <div class="status-row">
-        <span>{completedCount === totalTasks ? 'Complete' : 'In progress'}</span>
-        <strong>{totalTasks - completedCount} tasks remaining</strong>
-      </div>
     </div>
   </section>
 

@@ -8,8 +8,15 @@
   const canSubmit = $derived(hasName && hasEmail)
 
   // TODO 1: Add an age field and show it in the preview.
+  let age = $state('')
   // TODO 2: Add a validation message when the email is invalid.
+    const emailError = $derived(
+      hasEmail && email.trim().length === 0 ? '' : 'Please enter a valid email address.'
+    )
   // TODO 3: Handle submit and show a saved message.
+  function handleSubmit() {
+    alert('Profile saved!')
+  }
 </script>
 
 <section class="exercise-card" aria-labelledby="profile-title">
@@ -28,6 +35,14 @@
     <label>
       Email
       <input bind:value={email} placeholder="ada@example.com" />
+      {#if emailError}
+        <span class="error-message">{emailError}</span>
+      {/if}
+    </label>
+
+    <label>
+      Age
+      <input bind:value={age} placeholder="67" />
     </label>
 
     <label>
@@ -35,9 +50,11 @@
       <input bind:value={role} />
     </label>
 
-    <button type="button" class="button button-primary" disabled={!canSubmit}>
-      Save profile
-    </button>
+    {#if canSubmit}
+         <button type="button" class="button button-primary"  onclick={handleSubmit}>
+          Save profile
+        </button> 
+    {/if}
   </form>
 
   <div class="preview-box">
